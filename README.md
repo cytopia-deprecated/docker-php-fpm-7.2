@@ -194,7 +194,7 @@ Xdebug, Zend OPcache
 | [mysqldump-secure](https://mysqldump-secure.org) | 0.16.3 |
 | [node](https://nodejs.org)             | 6.10.3 |
 | [npm](https://www.npmjs.com)           | 3.10.10 |
-| [phalcon-devtools](https://github.com/phalcon/phalcon-devtools)   | 2 |
+| [phalcon-devtools](https://github.com/phalcon/phalcon-devtools)   | 3.0.5 |
 | [symfony installer](https://github.com/symfony/symfony-installer) | 1.5.9 |
 | [wp-cli](https://wp-cli.org)           | 1.2.1 |
 

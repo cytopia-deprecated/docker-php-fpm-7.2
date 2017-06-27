@@ -197,6 +197,14 @@ RUN \
 	ln -s /usr/local/src/laravel-installer/laravel /usr/local/bin/laravel && \
 	chmod +x /usr/local/bin/laravel
 
+RUN \
+	mkdir -p /usr/local/src && \
+	chown ${MY_USER}:${MY_GROUP} /usr/local/src && \
+	su - ${MY_USER} -c 'git clone https://github.com/phalcon/phalcon-devtools /usr/local/src/phalcon-devtools' && \
+	su - ${MY_USER} -c 'cd /usr/local/src/phalcon-devtools && git checkout $(git tag | grep 'v3.0' | sort -V | tail -1)' && \
+	su - ${MY_USER} -c 'cd /usr/local/src/phalcon-devtools && ./phalcon.sh' && \
+	ln -s /usr/local/src/phalcon-devtools/phalcon.php /usr/local/bin/phalcon && \
+	chmod +x /usr/local/bin/phalcon
 
 ###
 ### Configure PS1
