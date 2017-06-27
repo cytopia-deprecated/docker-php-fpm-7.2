@@ -1,6 +1,6 @@
 # PHP-FPM 7.2 Docker
 
-<small>**Latest build:** 2017-06-27</small>
+<small>**Latest build:** 2017-06-26</small>
 
 [![Build Status](https://travis-ci.org/cytopia/docker-php-fpm-7.2.svg?branch=master)](https://travis-ci.org/cytopia/docker-php-fpm-7.2) [![](https://images.microbadger.com/badges/version/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2") [![](https://images.microbadger.com/badges/image/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2") [![](https://images.microbadger.com/badges/license/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2")
 
