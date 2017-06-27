@@ -1,0 +1,57 @@
+###
+### Enable sudo (required for docker service)
+###
+sudo: required
+
+
+###
+### Attach services
+###
+services:
+  - docker
+
+
+###
+### Global variables
+###
+env:
+  matrix:
+    - DEBUG=0
+    - DEBUG=1
+    - DEBUG=2
+
+
+###
+### Show information
+###
+before_install:
+  # List versions
+  - whoami
+  - groups
+  - uname -a
+  - docker version
+  - docker-compose version
+  # Get newer docker version
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+  - docker version
+
+
+###
+### Disable any provided services
+###
+before_script:
+
+  # Disable services enabled by default
+  # http://docs.travis-ci.com/user/database-setup/#MySQL
+  - sudo /etc/init.d/mysql stop || true
+  - sudo /etc/init.d/postgresql stop || true
+  - sudo service mysql stop || true
+  - sudo service postgresql stop || true
+
+
+###
+### Test
+###
+script:
+  - build/docker-validate.sh "${DEBUG}"
