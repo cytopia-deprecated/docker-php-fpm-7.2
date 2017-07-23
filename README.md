@@ -1,6 +1,6 @@
 # PHP-FPM 7.2 Docker
 
-<small>**Latest build:** 2017-06-27</small>
+<small>**Latest build:** 2017-07-23</small>
 
 [![Build Status](https://travis-ci.org/cytopia/docker-php-fpm-7.2.svg?branch=master)](https://travis-ci.org/cytopia/docker-php-fpm-7.2) [![](https://images.microbadger.com/badges/version/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2") [![](https://images.microbadger.com/badges/image/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2") [![](https://images.microbadger.com/badges/license/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2")
 
@@ -169,14 +169,15 @@ $ docker run -d \
 
 **[Version]**
 
-PHP 7.2.0alpha2 (cli) (built: Jun 21 2017 06:56:14) ( NTS )
+PHP 7.2.0beta1 (cli) (built: Jul 18 2017 21:20:29) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.2.0-dev, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.2.0alpha2, Copyright (c) 1999-2017, by Zend Technologies
+    with Zend OPcache v7.2.0beta1, Copyright (c) 1999-2017, by Zend Technologies
+    with Xdebug v2.6.0-dev, Copyright (c) 2002-2017, by Derick Rethans
 
 **[PHP Modules]**
 
-apcu, bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, intl, json, ldap, libxml, mbstring, mcrypt, memcache, mongodb, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, phalcon, Phar, posix, pspell, readline, recode, redis, Reflection, session, shmop, SimpleXML, soap, sockets, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uploadprogress, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib
+apcu, bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, intl, json, ldap, libxml, mbstring, mcrypt, memcache, memcached, mongodb, msgpack, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, phalcon, Phar, posix, pspell, readline, recode, redis, Reflection, session, shmop, SimpleXML, soap, sockets, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uploadprogress, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib
 
 **[Zend Modules]**
 
@@ -187,10 +188,10 @@ Xdebug, Zend OPcache
 | tool           | version |
 |----------------|---------|
 | [composer](https://getcomposer.org)    | 1.4.2 |
-| [drupal-console](https://drupalconsole.com) | 1.0.0-rc22 |
+| [drupal-console](https://drupalconsole.com) | 1.0.0-rc25 |
 | [drush](http://www.drush.org)          | 8.1.12 |
 | [git](https://git-scm.com)             | 1.8.3.1 |
-| [laravel installer](https://github.com/laravel/installer)     | 1.3.6 |
+| [laravel installer](https://github.com/laravel/installer)     | 1.3.7 |
 | [mysqldump-secure](https://mysqldump-secure.org) | 0.16.3 |
 | [node](https://nodejs.org)             | 6.10.3 |
 | [npm](https://www.npmjs.com)           | 3.10.10 |
