@@ -1,6 +1,6 @@
 # PHP-FPM 7.2 Docker
 
-<small>**Latest build:** 2017-07-23</small>
+<small>**Latest build:** 2017-08-08</small>
 
 [![Build Status](https://travis-ci.org/cytopia/docker-php-fpm-7.2.svg?branch=master)](https://travis-ci.org/cytopia/docker-php-fpm-7.2) [![](https://images.microbadger.com/badges/version/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2") [![](https://images.microbadger.com/badges/image/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2") [![](https://images.microbadger.com/badges/license/cytopia/php-fpm-7.2.svg)](https://microbadger.com/images/cytopia/php-fpm-7.2 "php-fpm-7.2")
 
@@ -169,10 +169,10 @@ $ docker run -d \
 
 **[Version]**
 
-PHP 7.2.0beta1 (cli) (built: Jul 18 2017 21:20:29) ( NTS )
+PHP 7.2.0beta2 (cli) (built: Aug  1 2017 20:33:33) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.2.0-dev, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.2.0beta1, Copyright (c) 1999-2017, by Zend Technologies
+    with Zend OPcache v7.2.0beta2, Copyright (c) 1999-2017, by Zend Technologies
     with Xdebug v2.6.0-dev, Copyright (c) 2002-2017, by Derick Rethans
 
 **[PHP Modules]**
@@ -187,13 +187,13 @@ Xdebug, Zend OPcache
 
 | tool           | version |
 |----------------|---------|
-| [composer](https://getcomposer.org)    | 1.4.2 |
-| [drupal-console](https://drupalconsole.com) | 1.0.0-rc25 |
+| [composer](https://getcomposer.org)    | 1.5.0 |
+| [drupal-console](https://drupalconsole.com) | 1.0.0 |
 | [drush](http://www.drush.org)          | 8.1.12 |
 | [git](https://git-scm.com)             | 1.8.3.1 |
 | [laravel installer](https://github.com/laravel/installer)     | 1.3.7 |
 | [mysqldump-secure](https://mysqldump-secure.org) | 0.16.3 |
-| [node](https://nodejs.org)             | 6.10.3 |
+| [node](https://nodejs.org)             | 6.11.1 |
 | [npm](https://www.npmjs.com)           | 3.10.10 |
 | [phalcon-devtools](https://github.com/phalcon/phalcon-devtools)   | 3.0.5 |
 | [symfony installer](https://github.com/symfony/symfony-installer) | 1.5.9 |
