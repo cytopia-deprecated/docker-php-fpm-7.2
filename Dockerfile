@@ -13,7 +13,7 @@ LABEL \
 	image="php-fpm-7.2" \
 	vendor="cytopia" \
 	license="MIT" \
-	build-date="2017-08-15"
+	build-date="2017-08-17"
 
 
 ###
@@ -45,6 +45,7 @@ RUN \
 	groupadd -g ${MY_GID} -r ${MY_GROUP} && \
 	adduser -u ${MY_UID} -m -s /bin/bash -g ${MY_GROUP} ${MY_USER}
 
+# Add repository and keys
 RUN \
 	yum -y update && \
 	yum -y install deltarpm && \
@@ -73,6 +74,7 @@ RUN \
 	(rm /var/cache/yum/x86_64/7/timedhosts 2>/dev/null || true) && \
 	(rm /var/cache/yum/x86_64/7/timedhosts.txt 2>/dev/null || true)
 
+# Install packages
 RUN yum -y update && \
 	while true; do \
 		if yum -y install \
@@ -296,7 +298,8 @@ RUN \
 	npm install -g eslint && \
 	npm install -g jsonlint && \
 	npm install -g mdlint && \
-	npm install -g gulp
+	npm install -g gulp && \
+	ln -sf /usr/local/node/bin/* /usr/local/bin/
 
 
 ###
@@ -307,11 +310,21 @@ RUN \
 		echo "if [ -f /etc/bashrc ]; then"; \
 		echo "    . /etc/bashrc"; \
 		echo "fi"; \
+		echo "if [ -d /etc/bashrc-devilbox.d/ ]; then"; \
+		echo "    for f in /etc/bashrc-devilbox.d/*.sh ; do"; \
+		echo "        .\${f}"; \
+		echo "    done"; \
+		echo "fi";\
 	) | tee /home/${MY_USER}/.bashrc /root/.bashrc && \
 	( \
 		echo "if [ -f ~/.bashrc ]; then"; \
 		echo "    . ~/.bashrc"; \
 		echo "fi"; \
+		echo "if [ -d /etc/bashrc-devilbox.d/ ]; then"; \
+		echo "    for f in /etc/bashrc-devilbox.d/*.sh ; do"; \
+		echo "        .\${f}"; \
+		echo "    done"; \
+		echo "fi";\
 	) | tee /home/${MY_USER}/.bash_profile /root/.bash_profile && \
 	echo ". /etc/bash_profile" | tee -a /etc/bashrc
 
